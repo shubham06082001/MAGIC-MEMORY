@@ -9,6 +9,11 @@ import scrollImage from './img/scroll-1.png';
 import shieldImage from './img/shield-1.png';
 import swordImage from './img/sword-1.png';
 
+import matchCorrect from './Sounds/dingcorrect.wav';
+import shuffle from './Sounds/shuffle.wav';
+import cardFlip from './Sounds/cardflip.wav';
+import matchWrong from './Sounds/dingwrong.wav';
+
 const cardImages = [
   { src: helmetImage, matched: false },
   { src: potionImage, matched: false },
@@ -25,6 +30,14 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
 
+  let match = new Audio(matchCorrect);
+  let flip = new Audio(cardFlip);
+  let shuffle_cards = new Audio(shuffle);
+  let wrong = new Audio(matchWrong);
+  // match.play();
+
+  const recordTime = 0;
+
   // shuffle cards
 
   const shuffleCards = () => {
@@ -37,6 +50,13 @@ function App() {
 
     setCards(shuffledCards);
     setTurns(0);
+    shuffle_cards.play();
+  };
+
+  const gameOver = () => {
+    // cardImages.filter((card) => !card.matched).length === 0;
+    // setCounter(0);
+    // FIXME: add game over screen && change timer and reset game
   };
 
   // handle choice
@@ -67,12 +87,14 @@ function App() {
           });
         });
         resetTurn();
+        match.play();
       } else {
         setTimeout(
           () => resetTurn(),
           // console.log('no match')
           1000
         );
+        wrong.play();
       }
     }
   }, [choiceOne, choiceTwo]);
@@ -86,6 +108,16 @@ function App() {
     setDisabled(false);
   };
 
+  //TODO: TIMER
+
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    const timer =
+      counter >= 0 && setInterval(() => setCounter(counter + 1), 1000);
+    return () => clearInterval(timer);
+  }, [counter]);
+
   useEffect(() => {
     shuffleCards();
   }, []);
@@ -94,7 +126,11 @@ function App() {
     <div className='App'>
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New Game</button>
-      <p>Turns: {turns}</p>
+
+      <div className='board'>
+        <p>Turns: {turns}</p>
+        <p>Countdown: {counter}</p>
+      </div>
       <div className='card-grid'>
         {cards.map((card) => (
           <SingleCard
