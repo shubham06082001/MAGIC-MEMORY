@@ -1,20 +1,27 @@
 {
   "files": {
     "main.css": "/MAGIC-MEMORY/static/css/main.47167c65.chunk.css",
-    "main.js": "/MAGIC-MEMORY/static/js/main.b01540c9.chunk.js",
-    "main.js.map": "/MAGIC-MEMORY/static/js/main.b01540c9.chunk.js.map",
+    "main.js": "/MAGIC-MEMORY/static/js/main.ef80178c.chunk.js",
+    "main.js.map": "/MAGIC-MEMORY/static/js/main.ef80178c.chunk.js.map",
     "runtime-main.js": "/MAGIC-MEMORY/static/js/runtime-main.e6b3638e.js",
     "runtime-main.js.map": "/MAGIC-MEMORY/static/js/runtime-main.e6b3638e.js.map",
     "static/js/2.1965c1de.chunk.js": "/MAGIC-MEMORY/static/js/2.1965c1de.chunk.js",
     "static/js/2.1965c1de.chunk.js.map": "/MAGIC-MEMORY/static/js/2.1965c1de.chunk.js.map",
     "index.html": "/MAGIC-MEMORY/index.html",
     "static/css/main.47167c65.chunk.css.map": "/MAGIC-MEMORY/static/css/main.47167c65.chunk.css.map",
-    "static/js/2.1965c1de.chunk.js.LICENSE.txt": "/MAGIC-MEMORY/static/js/2.1965c1de.chunk.js.LICENSE.txt"
+    "static/js/2.1965c1de.chunk.js.LICENSE.txt": "/MAGIC-MEMORY/static/js/2.1965c1de.chunk.js.LICENSE.txt",
+    "static/media/cover.b35cfd28.png": "/MAGIC-MEMORY/static/media/cover.b35cfd28.png",
+    "static/media/helmet-1.d082cb3c.png": "/MAGIC-MEMORY/static/media/helmet-1.d082cb3c.png",
+    "static/media/potion-1.94e34273.png": "/MAGIC-MEMORY/static/media/potion-1.94e34273.png",
+    "static/media/ring-1.4c376e3f.png": "/MAGIC-MEMORY/static/media/ring-1.4c376e3f.png",
+    "static/media/scroll-1.135e1c7d.png": "/MAGIC-MEMORY/static/media/scroll-1.135e1c7d.png",
+    "static/media/shield-1.a961da95.png": "/MAGIC-MEMORY/static/media/shield-1.a961da95.png",
+    "static/media/sword-1.47dbfbdd.png": "/MAGIC-MEMORY/static/media/sword-1.47dbfbdd.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e6b3638e.js",
     "static/js/2.1965c1de.chunk.js",
     "static/css/main.47167c65.chunk.css",
-    "static/js/main.b01540c9.chunk.js"
+    "static/js/main.ef80178c.chunk.js"
   ]
 }
