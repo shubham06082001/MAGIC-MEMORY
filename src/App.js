@@ -51,6 +51,7 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
     shuffle_cards.play();
+    setCounter(0);
   };
 
   const gameOver = () => {
